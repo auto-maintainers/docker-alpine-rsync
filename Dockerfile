@@ -19,7 +19,8 @@ read only = yes\n\
     read only = yes\n\
     reverse lookup = no\n'\
     > /etc/rsyncd.conf
-
+RUN mkdir -p /var/lock/rsync
+RUN chmod 755 /var/lock/rsync
 # Run unprivileged
 USER nobody
 
