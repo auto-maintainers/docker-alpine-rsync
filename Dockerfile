@@ -21,6 +21,7 @@ read only = yes\n\
     > /etc/rsyncd.conf
 RUN mkdir -p /var/lock/rsync
 RUN chmod 755 /var/lock/rsync
+RUN chown nobody /var/lock/rsync
 # Run unprivileged
 USER nobody
 
